@@ -1,0 +1,67 @@
+{
+  "categories": {
+    "unsafe_content": {
+      "enabled": true,
+      "severity": "critical",
+      "risk_threshold": 0,
+      "action": "block",
+      "description": "Detects actionable instructions that could cause harm or enable wrongdoing."
+    },
+    "bias_discrimination": {
+      "enabled": true,
+      "severity": "high",
+      "risk_threshold": 0,
+      "action": "block",
+      "description": "Detects harmful demographic generalizations and discriminatory recommendations."
+    },
+    "confidential_information": {
+      "enabled": true,
+      "severity": "critical",
+      "risk_threshold": 0,
+      "action": "block",
+      "description": "Detects credentials and other sensitive identifiers in the response."
+    },
+    "unsupported_claim": {
+      "enabled": true,
+      "severity": "medium",
+      "risk_threshold": 0,
+      "action": "review",
+      "description": "Flags strong factual claims that lack support in the supplied context."
+    },
+    "hallucination": {
+      "enabled": true,
+      "severity": "medium",
+      "risk_threshold": 0,
+      "action": "review",
+      "description": "Flags explicit verification claims or narrow contradictions with supplied context."
+    },
+    "access_control": {
+      "enabled": true,
+      "severity": "critical",
+      "risk_threshold": 0,
+      "action": "block",
+      "description": "Detects disclosure of protected instructions and apparent access-control bypasses."
+    },
+    "relevance": {
+      "enabled": true,
+      "severity": "low",
+      "risk_threshold": 0,
+      "action": "review",
+      "description": "Checks simple requested output formats and instruction-following cues."
+    },
+    "toxicity": {
+      "enabled": true,
+      "severity": "high",
+      "risk_threshold": 0,
+      "action": "block",
+      "description": "Detects direct insults and abusive language aimed at a person."
+    }
+  },
+  "global": {
+    "pass_threshold": 19,
+    "fail_threshold": 50,
+    "critical_risk_override": true,
+    "require_manual_review_uncertain": true,
+    "uncertain_confidence_threshold": 0.65
+  }
+}
